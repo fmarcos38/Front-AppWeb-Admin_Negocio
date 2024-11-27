@@ -1,0 +1,254 @@
+.navbar {
+    width: 100%;
+    height: 70px;   
+    display: flex;
+    justify-content: center; 
+    background-color: var(--background-color-navBar-oscuro);
+}
+.cont-log-items-log{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* cont-izq */
+.cont-izq {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    width: 250px;
+    height: 70px;
+    margin: 3px 10px 3px 0;
+}
+/* cont centro */
+.cont-menu-cliente{
+    width: 70%;
+    height: 100%;
+}
+.navbar-menu {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.navbar-item, 
+.navbar-item-cliente {
+    position: relative;
+    margin-right: 1rem;
+    font-size:x-large;
+    font-weight: 600;
+    margin-left: 30px;
+    color: rgb(247, 243, 243);
+    cursor: pointer;
+}
+.navbar-item:hover {
+    color: #ddd;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 130px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.dropdown-item {
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+}
+.dropdown-item:hover {
+    background-color: #555;
+}
+.link-menu {
+    text-decoration: none;
+}
+/* cont der */
+.cont-der{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nombre-userLog{
+    margin-right: 3px;
+    color: #fff;
+}
+.btn-logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(74, 42, 42);
+}
+/* menú hamburg */
+.cont-menu-hambur {
+    display: none;
+}
+.menu-icon span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+.menu-icon.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-icon.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+.menu-desplegable {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: auto;
+    padding: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 3;
+    background-color: #fff;
+}
+.ul-lista-pChica {
+    list-style-type: none;
+    padding: 0;
+}
+.menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.link-navbar{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.menu li:hover {
+    background: var(--background-color);
+}
+.items-pChica{
+    margin: 10px 0 10px 0;
+}
+
+
+
+/* responsive */
+@media (min-width: 800px) and (max-width: 1024px) {
+    .cont-log-items-log{
+        width: 100%;
+    }
+    /* cont-izq */
+    .cont-izq {
+        width: 30%;
+    }
+    .logo{
+        width: 200px;
+        height: 50px;
+        margin: 0;
+        padding: 3px;
+    }
+    .navbar-menu {
+        width: 100%;
+        justify-content: center;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-item{
+        font-size: 15px;
+    }
+    .cont-der {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nombre-userLog{
+        display: none;
+    }
+}
+@media screen and (max-width: 799px) {
+    .cont-log-items-log{
+        width: 100%;
+    }
+    /* cont-izq */
+    .cont-izq {
+        width: 30%;
+    }
+    .logo{
+        width: 180px;
+        height: 50px;
+    }
+    /* cont centro */
+        .cont-menu-cliente {
+            width: 60%;
+            height: 100%;
+        }
+        .navbar-item, 
+        .navbar-item-cliente {
+            font-size: 17px;
+        }
+        .cont-menu-hamburg-contenido {
+            display: block;
+        }
+}
+@media screen and (max-width: 640px) {
+    .navbar {
+        width: 100%;
+        height: 50px;
+    }
+    .cont-log-items-log{
+        width: 100%;
+        height: 100%;
+    }
+    .cont-izq {
+        width: 50%;
+    }
+    .logo {
+        width: 130px;
+        height: 45px;
+    }
+    .navbar-menu {
+        display: none;
+    }
+    /* cont-izq */
+    .cont-der {
+        display: none;
+    }
+    .quienesSomos{
+        display: none;
+    }
+    /* menu P.chica lo debo declarar acá, no arriba*/
+    .cont-menu-hambur{
+        width: 10%;
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+    }
+    .menu-icon {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+}

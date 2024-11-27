@@ -1,0 +1,109 @@
+.contFooter{
+    /*
+    position: fixed;
+    bottom: 0; */ /*SI quiero q qde fija como pie de pag o en el view heigth*/
+    /* left: 0; */
+    width: 100%;  
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    background-color: rgb(56, 39, 23);
+}
+.cont-footer {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.cont-items {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.col-1,
+.col-2,
+.col-3 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start; /* alineo EJE X */
+}
+/* color linea sup */
+.h2-foot{
+    width: 80%; /* largo de la linea */
+    border-bottom: 1px solid #fff;
+    margin: 0;
+}
+.titulo-col {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 0 3px 0;
+}
+.info-col {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    margin: 3px 0 0 0;
+}
+.divLinks{
+    display: flex;
+    flex-direction: column;
+}
+/* color par los Link */
+.link-footbar{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 3px 0 0 0;
+}
+.icono-redes-foot{
+    color: aliceblue;
+    font-size: 33px;
+    margin: 10px 0 0 0;
+}
+.icono-redes-foot:hover{
+    color: blueviolet;
+}
+
+@media screen and (max-width: 900px){
+    .footer {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 650px) {
+    .cont-items { 
+        width: 90%;
+        height: 100%;
+        flex-direction: column;
+        border-radius: 10px;
+        margin-bottom: 13px;
+    }
+    .col-1,
+    .col-2,
+    .col-3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* alineo EJE X */
+    }
+    .h2-foot{
+        width: 80%; /* largo de la linea */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+        margin: 0;
+    }
+    .titulo-col {
+        font-size: 20px;
+        margin: 0 0 3px 0;
+    }
+}
